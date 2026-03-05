@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+
 export default function Hero() {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
@@ -27,7 +28,7 @@ export default function Hero() {
     <section className="relative max-w-[1400px] mx-auto 
     bg-gradient-to-b from-white to-green-50 
     px-4 sm:px-10 flex flex-col items-center 
-    py-[80px] md:py-[120px] overflow-hidden">
+    pb-[80px] pt-[120px] md:py-[120px] overflow-hidden">
 
       {/* Soft Background Blur */}
       <div className="absolute -top-20 -right-20 w-[300px] h-[300px] 

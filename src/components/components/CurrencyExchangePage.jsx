@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // 🔥 qo‘shildi
-import CardImg from "../assets/currency-card.png";
+
+import CardImg from "../../assets/currency-card.png";
 
 const currencies = [
   { code: "USD", buy: "10,200", sell: "10,250", color: "from-blue-600 to-blue-800", link: "/salom/usd" },

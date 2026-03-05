@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Target, Rocket, PhoneCall, ArrowRight } from "lucide-react";
-import bankImage from "../assets/biz haqimizda.png";
+import bankImage from "../../assets/biz haqimizda.png";
 import { useTranslation } from "react-i18next";
 
 export default function AboutUs() {

@@ -5,14 +5,13 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Register from "./pages/Register";
-import Contacts from "./components/Contact";
-import Kredit from "./components/Kredit";
-import AboutUs from "./components/AboutUs";
-import CardSection from "./components/CardSection";
-import CurrencyExchangePage from "./components/CurrencyExchangePage";
+
+import Kredit from "./components/_compoint_/Kredit";
+
+
 import { UserProvider } from "./context/UserContext";
-import Deposits from "./components/Deposits";
-import Deposits1 from "./components/OmonatOchish";
+
+import Deposits1 from "./components/_compoint_/OmonatOchish";
 import USDPage from "./components/404/USDPage";
 import EURPage from "./components/404/EURPage";
 import GBPPage from "./components/404/GBPPage";
@@ -27,6 +26,11 @@ import Srm from "./pages/Srm";
 import Dashboard from "./pages/Dashboard";
 import ErrorBoundary from "./context/ErrorBoundary";
 import Transfer from "./pages/Transfer";
+import AboutUs from "./components/components/AboutUs";
+      import CardSection from "./components/components/CardSection";
+import CurrencyExchangePage from "./components/components/CurrencyExchangePage";
+import Contacts from "./components/components/Contactkar";
+import Deposits from "./components/components/Deposits";
 
 function App() {
   const location = useLocation();

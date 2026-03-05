@@ -38,31 +38,41 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${
-          scrolled
-            ? "h-[75px] bg-white/70 backdrop-blur-xl shadow-xl border-b border-white/20"
-            : "h-[100px] bg-gradient-to-r from-emerald-600 via-green-500 to-emerald-600"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${scrolled
+          ? "h-[75px] bg-white/70 backdrop-blur-xl shadow-xl border-b border-white/20"
+          : "h-[100px] bg-gradient-to-r from-emerald-600 via-green-500 to-emerald-600"
+          }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 h-full flex justify-between items-center">
-          
+
           {/* LOGO */}
           <Link to="/">
-            <img
-              src={logo}
-              alt="Logo"
-              className={`transition-all duration-500 ${
-                scrolled
-                  ? "w-[100px] h-[45px]"
-                  : "w-[130px] h-[100px] "
-              }`}
-            />
+          <div
+  className={`transition-all duration-500 flex items-center justify-center overflow-hidden ${
+    scrolled
+      ? "bg-transparent p-2" // Bu yerda fonni olib tashladim, faqat masofa qoldi
+      : "bg-transparent"
+  }`}
+  style={{
+    width: scrolled ? "150px" : "140px",
+    height: scrolled ? "60px" : "100px"
+  }}
+>
+  <img
+    src={logo}
+    alt="Logo"
+    className={`w-full h-[110px] object-cover object-center transition-all duration-500 ${
+      scrolled 
+        ? "drop-shadow-[0_1px_1px_rgba(0,0,0,0.86)]" // 
+        : "drop-shadow-none"
+    }`}
+  />
+</div>
           </Link>
 
           {/* DESKTOP LINKS */}
-          <div className={`hidden md:flex gap-8 items-center font-medium uppercase text-[11px] tracking-[2px] ${
-            scrolled ? "text-gray-700" : "text-white"
-          }`}>
+          <div className={`hidden md:flex gap-8 items-center font-medium uppercase text-[11px] tracking-[2px] ${scrolled ? "text-gray-700" : "text-white"
+            }`}>
             {visibleItems.map((item) => (
               <Link
                 key={item}
@@ -106,27 +116,24 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link to="/register" className="hidden sm:block">
               <button
-                className={`transition-all duration-500 rounded-xl font-semibold shadow-lg ${
-                  scrolled
-                    ? "px-5 py-2 text-sm bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:scale-105"
-                    : "px-6 py-2.5 text-sm bg-white text-emerald-600 hover:bg-emerald-50"
-                }`}
+                className={`transition-all duration-500 rounded-xl font-semibold shadow-lg ${scrolled
+                  ? "px-5 py-2 text-sm bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:scale-105"
+                  : "px-6 py-2.5 text-sm bg-white text-emerald-600 hover:bg-emerald-50"
+                  }`}
               >
                 {t("navbar.login")}
               </button>
             </Link>
 
-            <div className={`hidden md:block scale-90 ${
-              scrolled ? "" : "text-white"
-            }`}>
+            <div className={`hidden md:block scale-90 ${scrolled ? "" : "text-white"
+              }`}>
               <LanguageDetector />
             </div>
 
             <button
               onClick={() => setMenuOpen(true)}
-              className={`md:hidden p-2 text-2xl ${
-                scrolled ? "text-emerald-700" : "text-white"
-              }`}
+              className={`md:hidden p-2 text-2xl ${scrolled ? "text-emerald-700" : "text-white"
+                }`}
             >
               ☰
             </button>
@@ -136,15 +143,13 @@ export default function Navbar() {
 
       {/* MOBILE MENU GLASS */}
       <div
-        className={`fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
-          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
         onClick={() => setMenuOpen(false)}
       >
         <div
-          className={`fixed top-0 right-0 h-full w-[280px] bg-white/80 backdrop-blur-2xl shadow-2xl p-6 transition-transform duration-500 ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed top-0 right-0 h-full w-[280px] bg-white/80 backdrop-blur-2xl shadow-2xl p-6 transition-transform duration-500 ${menuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center mb-10">
