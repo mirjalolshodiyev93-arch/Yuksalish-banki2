@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import logo from "../../../public/Logo.png";
+import logo from "../../assets/logo.png";
 import LanguageDetector from "./en_uz";
 
 export default function Navbar() {
