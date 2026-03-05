@@ -140,9 +140,9 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12 font-sans">
+    <div className="min-h-screen pt-[110px] bg-gray-50 flex items-center justify-center px-4 pb-12 font-sans">
       <div className="w-full max-w-4xl bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-        <div className="bg-red-600 p-6 text-center">
+        <div className="bg-green-600 p-6 text-center">
           <h2 className="text-2xl font-bold text-white">{t("translation.send")}</h2>
         </div>
 
@@ -226,7 +226,7 @@ export default function Register() {
 
           <div className="flex flex-col gap-2">
             <label className="flex items-center gap-3 cursor-pointer group">
-              <input type="checkbox" name="agree" checked={form.agree} onChange={handleChange} className="w-5 h-5 accent-red-600" />
+              <input type="checkbox" name="agree" checked={form.agree} onChange={handleChange} className="w-5 h-5 accent-green-600" />
               <span className="text-sm text-gray-600 group-hover:text-gray-900 transition">{t("translation.agree")}</span>
             </label>
             {errors.agree && <p className="text-red-500 text-xs">{errors.agree}</p>}
@@ -235,7 +235,7 @@ export default function Register() {
           <button 
             type="submit" 
             disabled={loading}
-            className={`w-full py-4 rounded-xl text-white font-bold text-lg transition-all ${loading ? "bg-gray-400" : "bg-red-600 hover:bg-red-700 shadow-lg"}`}
+            className={`w-full py-4 rounded-xl text-white font-bold text-lg transition-all ${loading ? "bg-gray-400" : "bg-green-600 hover:bg-green-700 shadow-lg"}`}
           >
             {loading ? "..." : t("translation.send")}
           </button>

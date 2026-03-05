@@ -11,13 +11,19 @@ export default function Profile() {
     <div>
       
       {/* Profil header */}
-          <div className="flex items-center mb-8">
-        <img
-          src="https://i.pravatar.cc/150?img=3"
+     <div className="flex items-center mb-8">
+      
+         <img
+          src={user.avatar}
           alt="avatar"
-          className="w-16 h-16 rounded-full mr-4 border-2 border-gray-300"
+          className="w-16 h-16 rounded-full mr-4 border-2  object-cover"
         />
-        <h1 className="text-3xl font-bold">{user.name}</h1> {/* ism dinamik */}
+    
+
+        <div>
+          <h1 className="text-2xl font-bold">{user.name}</h1>
+          <p className="text-gray-500">{user.email}</p>
+        </div>
       </div>
 
       {/* Stat Cards */}

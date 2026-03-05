@@ -25,7 +25,7 @@
     "home": "Our Services"
   },
   "navbar": {
-    "more":"More",
+    "more":"MORE",
     "aboutus":"AboutUs",
     "dashboard":"Dashboard",
 "card":"Card",
@@ -43,6 +43,7 @@
     "service": "Service"
   },
   "hero": {
+    "badle":"O'zbekistonda №1 raqamli bank",
     "desc": "Build your financial future with confidence with Lodo Bank.",
     "title": "Trust, Security,",
     "subtitle": "Growth",

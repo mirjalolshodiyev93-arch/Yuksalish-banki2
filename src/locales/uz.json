@@ -24,7 +24,7 @@
     "home": "Bizning xizmatlar"
   },
   "navbar": {
-    "more": "Yana",
+    "more": "YANA",
     "kredit": "Kredit",
     "home": "Bosh sahifa",
     "aboutus": "Biz haqimizda",
@@ -42,6 +42,7 @@
     "service": "Xizmat"
   },
   "hero": {
+    "badle":"O'zbekistonda №1 raqamli bank",
     "desc": "Lodo Bank bilan moliyaviy kelajagingizni ishonch bilan quring.",
     "title": "Ishonch, Xavfsizlik,",
     "subtitle": "Rivojlanish",

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { cards } from "../data/cards";
+import { Link } from "react-router-dom";
 
 export default function CardSection() {
   const { t } = useTranslation();
@@ -38,9 +39,11 @@ export default function CardSection() {
                    {/* Bu yerni ham tarjima qilish mumkin: t('buttons.orderOnline') */}
                    Oformit onlayn
                 </button>
+              <Link to={""}>
                 <button className="border border-gray-300 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">
                    {t("buttons.moreDetails")}
                 </button>
+              </Link>
               </div>
             </div>
 

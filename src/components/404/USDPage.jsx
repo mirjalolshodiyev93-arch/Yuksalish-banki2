@@ -18,8 +18,8 @@ export default function USDPage() {
   const sellRate = 12920;
 
   return (
-    <section className="min-h-screen bg-slate-50 p-4 md:p-10 font-sans">
-      <div className="max-w-6xl mx-auto">
+    <section className="min-h-screen bg-slate-50 p-4 md:p-10 font-sans " >
+      <div className="max-w-6xl mx-auto pt-[100px]">
         
         {/* Header qismi */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">

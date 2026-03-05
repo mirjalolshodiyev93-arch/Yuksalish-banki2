@@ -15,7 +15,7 @@ const initialTestimonials = [
     img: "https://i.pravatar.cc/100?img=32"
   },
   {
-    name: "Jasurbek T.",
+    name: " Jumaqulva J",
     role: "Valyuta Savdogari",
     message: "Valyuta kurslari yangilanadi va har doim qulay. Men doimo bu bank bilan ishlayman.",
     img: "https://i.pravatar.cc/100?img=44"
