@@ -12,6 +12,7 @@ import Kredit from "./components/_compoint_/Kredit";
 import { UserProvider } from "./context/UserContext";
 
 import Deposits1 from "./components/_compoint_/OmonatOchish";
+
 import USDPage from "./components/404/USDPage";
 import EURPage from "./components/404/EURPage";
 import GBPPage from "./components/404/GBPPage";
@@ -31,6 +32,7 @@ import AboutUs from "./components/components/AboutUs";
 import CurrencyExchangePage from "./components/components/CurrencyExchangePage";
 import Contacts from "./components/components/Contactkar";
 import Deposits from "./components/components/Deposits";
+import OpenAccount from "./components/components/OpenAccount";
 
 function App() {
   const location = useLocation();
@@ -48,6 +50,7 @@ function App() {
           {/* Bosh sahifalar */}
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/hisob-ochish" element={<OpenAccount />} />
           <Route path="/register" element={<Register />} />
           <Route path="/salom" element={<CurrencyExchangePage />} />
           <Route path="/salom/usd" element={<USDPage />} />

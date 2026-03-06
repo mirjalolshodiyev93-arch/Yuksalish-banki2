@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
-
+const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -62,14 +62,17 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="bg-green-600 text-white px-8 py-3 rounded-xl 
-            font-semibold hover:bg-green-700 
-            hover:shadow-lg hover:shadow-green-200 
-            transition-all duration-300 active:scale-95">
-              {t("hero.button")}
-            </button>
+           <button
+  onClick={() => navigate("/services")}
+  className="bg-green-600 text-white px-8 py-3 rounded-xl
+  font-semibold hover:bg-green-700
+  hover:shadow-lg hover:shadow-green-200
+  transition-all duration-300 active:scale-95"
+>
+  {t("hero.button")}
+</button>
 
-            <button className="border border-green-600 text-green-600 px-8 py-3 rounded-xl 
+            <button  onClick={() => navigate("/hisob-ochish")} className="border border-green-600 text-green-600 px-8 py-3 rounded-xl 
             hover:bg-green-600 hover:text-white 
             hover:shadow-md transition-all duration-300 active:scale-95">
               {t("hero.button1")}
